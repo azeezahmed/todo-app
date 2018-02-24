@@ -24,8 +24,8 @@ gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
 
 group :development, :test do
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
 group :development do
@@ -36,7 +36,12 @@ group :development do
 end
 
 group :development, :test do
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem "rspec-rails"
+  gem 'simplecov'
+  gem 'factory_girl_rails'
+  gem 'rails-controller-testing'
+  gem 'shoulda-matchers', git: 'https://github.com/thoughtbot/shoulda-matchers.git', branch: 'rails-5'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

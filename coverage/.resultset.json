@@ -1,0 +1,102 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/shaik/projects/todo_app/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/home/shaik/projects/todo_app/app/helpers/todos_helper.rb": [
+        1,
+        null
+      ],
+      "/home/shaik/projects/todo_app/app/controllers/todos_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        4,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null
+      ],
+      "/home/shaik/projects/todo_app/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/home/shaik/projects/todo_app/app/models/todo.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/home/shaik/projects/todo_app/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/home/shaik/projects/todo_app/app/jobs/application_job.rb": [
+        0,
+        0
+      ]
+    },
+    "timestamp": 1519496393
+  }
+}
