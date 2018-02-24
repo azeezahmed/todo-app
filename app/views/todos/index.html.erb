@@ -1,0 +1,55 @@
+<div class='row justify-content-center'>
+<div class='col-md-8'>  
+<h1 class='text-center'>My todo list</h1>
+<%= link_to 'Add Todo', new_todo_path,{class: 'btn btn-default'} %>
+<hr>
+
+<table id="todo-table" style="width:100%">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Mark as Completed</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @todos.each do |todo| %>
+      <tr>
+        <td><%= todo.title %></td>
+        <td><%= check_box_tag 'todo_complete',todo.id,todo.completed?,class:'todo_complete'%></td>
+        <td><%= todo.status %></td>
+        <td><div class="btn-group">
+          <% if todo.pending? %> 
+            <%= link_to 'Edit', edit_todo_path(todo),{class:'btn btn-info'} %>
+          <%end%>
+          <%= link_to 'Destroy', todo, method: :delete, data: { confirm: 'Are you sure?' },class:'btn btn-danger' %></td>
+        </div>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+</div>
+
+  <div class="modal fade" id="myModal" role="dialog" data-backdrop="static">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="text-center modal-body">
+          <p>Please wait, processing....</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+<script>
+  $(document).ready(function() {
+    $('#todo-table').dataTable( {
+      "language": {"emptyTable": "Please Add your todo items"}
+    });
+  });
+</script>

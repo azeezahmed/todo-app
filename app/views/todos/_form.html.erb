@@ -1,0 +1,23 @@
+<%= form_with(model: todo, local: true) do |form| %>
+  <% if todo.errors.any? %>
+    <div class="alert alert-danger">
+      <h4><strong> Error !</strong></h4>
+
+      <ul>
+      <% todo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="input-group input-group-lg">
+  <span class="btn input-group-addon" id="basic-addon1">Title:</span>
+  <%= form.text_field :title, id: :todo_title,class:'form-control', 'aria-describedby':'basic-addon2'%>
+  <%= form.submit class:'btn btn-success input-group-addon',id:'basic-addon2' %>
+  </div>
+
+  <div class="actions">
+  </div>
+  <hr>
+<% end %>
